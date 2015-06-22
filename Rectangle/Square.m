@@ -7,17 +7,36 @@
 //
 
 #import "Square.h"
+#import "Rectangle.h"
 
 @implementation Square
 
--(void) setSide:(int)s
+-(instancetype) initWithSide: (int) s
 {
-    [self setWidth: s andHeight: s];
+    self = [super init];
+    rect = [[Rectangle alloc] init];
+    [rect setWidth: s andHeight: s];
+    return self;
+    
+}
+
+-(void) setSide: (int) s
+{
+    [rect setWidth:s andHeight:s];
 }
 
 -(int) side
 {
-    return self.width;
+    return [rect width];
 }
 
+-(int) area
+{
+    return [rect area];
+}
+
+-(int) perimeter
+{
+    return [rect perimeter];
+}
 @end

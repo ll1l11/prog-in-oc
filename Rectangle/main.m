@@ -18,23 +18,9 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        Fraction *a = [[Fraction alloc] init];
-        Fraction *b = [[Fraction alloc] init];
-        Fraction *result;
+        Square *mySquare = [[Square alloc] initWithSide:5];
+        NSLog(@"area %i", [mySquare area]);
         
-        [a setTo:1 over: 3];
-        [b setTo: 2 over:6];
-        
-        result = [a invert];
-        [a print];
-        [result print];
-        
-        BOOL equalResult;
-        int compareResult;
-        equalResult = [a isEqualTo: b];
-        compareResult = [a compare: b];
-        NSLog(@"equalResult %d", equalResult);
-        NSLog(@"compareResult %i", compareResult);
         
     }
     return 0;
